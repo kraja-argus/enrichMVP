@@ -28,7 +28,8 @@
     overflow: hidden;
     transition: 400ms;
     color: $color-white;
-    background: $button-gradient;
+    // background: $button-gradient;
+    background-color: #1852FD;
     border-color: var(--color-primary);
     font-size: 15px;
     padding: 10px 20px;
@@ -37,6 +38,7 @@
     &:hover,
     &:active,
     &:focus {
+        background-color: hsl(225, 98%, 44%) !important;
         color: $color-white !important;
         border-color: transparent !important;
     }
@@ -90,7 +92,8 @@
     &:focus {
         color: $color-white !important;
         border-color: transparent !important;
-        background: $button-gradient;
+        // background: $button-gradient;
+        background-color: #1852FD;
         transition: 0.2s ease-in-out;
     }
 }
@@ -224,7 +227,8 @@
         padding-top: 8px;
         padding-bottom: 8px;
         border-radius: 10px;
-        background-color: $button-gradient;
+        // background-color: $button-gradient;
+        background-color: #1852FD;
         border-color: transparent;
     }
 

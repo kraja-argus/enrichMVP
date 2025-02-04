@@ -11,6 +11,8 @@ $text-color-dark: #083A50;
 
 $navbar-text-dark: #1C1B24;
 $navbar-text-light: #f5f5f5;
+$card-title-color: #1D1D21;
+
 
 $header-title-light: #444050;
 $header-title-dark: #cfcde4;
@@ -100,6 +102,7 @@ $calendar-sand-red: #B23032;
     --grid-header-color: #{$grid-header};
     --outline-button-background: transparent;
     --sidebar-session-background: #{$sidebar-session-background};
+    --card-title-color: #{$card-title-color};
 }
 
 .dark {
@@ -121,6 +124,7 @@ $calendar-sand-red: #B23032;
     --grid-header-color: #{$note-color-dark};
     --outline-button-background: #{$primary-background-dark};
     --sidebar-session-background: #{sidebar-session-background};
+    --card-title-color: #{$table-text-color-dark};
 
 
 
@@ -239,7 +243,7 @@ $calendar-sand-red: #B23032;
 
     .note-card {
         .user-card {
-        background: $primary-background-dark;
+            background: $primary-background-dark;
         }
     }
 
@@ -249,6 +253,29 @@ $calendar-sand-red: #B23032;
     }
 
     .barcode {
-     filter: invert(1);
+        filter: invert(1);
+    }
+
+    .main-content .top-nav .blur-background .menu-tabs .nav-pills .nav-link {
+        background: $card-background-solid;
+        color: $color-white;
+
+        &:hover {
+            background: $primary;
+            color: $color-white;
+        }
+
+    }
+
+    .main-content .top-nav .blur-background .menu-tabs .nav-pills .nav-link.active {
+        background: $primary;
+        color: $color-white;
+    }
+
+    .enrich-card-tabs .nav-item .nav-link {
+        background: $primary-background-dark;
+    }
+    .enrich-card-tabs .nav-item .nav-link.active {
+        background: $primary;
     }
 }

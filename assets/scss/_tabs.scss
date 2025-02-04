@@ -99,8 +99,8 @@
 .enrich-card-tabs {
     .nav-item {
         .nav-link {
-            padding: 3px 6px;
-            font-size: 15px;
+            padding: 6px 8px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--color-text-heading);
             display: flex;
@@ -112,13 +112,13 @@
 
         &:first-child {
             .nav-link {
-                border-radius: 6px 0px 0px 6px;
+                border-radius: 8px 0px 0px 8px;
             }
         }
 
         &:last-child {
             .nav-link {
-                border-radius: 0px 6px 6px 0px;
+                border-radius: 0px 8px 8px 0px;
             }
         }
 
