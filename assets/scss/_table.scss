@@ -232,7 +232,8 @@
         align-items: center;
         gap: 6px;
         padding: 0 12px;
-        overflow: hidden;
+        overflow: visible;
+        width: 340px;
 
         .sport-icon-div {
             display: flex;
@@ -256,6 +257,13 @@
             flex-direction: column;
             justify-content: space-between;
             color: $text-color-dark;
+            position: relative;
+
+            .sport-status {
+                position: absolute;
+                top: -18px;
+                font-size: 12px;
+            }
 
             .sport-title {
                 font-size: 15px;
@@ -365,7 +373,8 @@
                     align-items: center;
                     gap: 6px;
                     padding: 0 12px;
-                    overflow: hidden;
+                    overflow: visible;
+                    width: 340px;
 
                     .sport-icon-div {
                         display: flex;
@@ -390,6 +399,14 @@
                         justify-content: space-between;
                         color: $text-color-dark;
                         gap: 2px;
+                        position: relative;
+
+                        .sport-status {
+                            position: absolute;
+                            top: -18px;
+                            font-size: 12px;
+
+                        }
 
                         .sport-title {
                             font-size: 15px;
@@ -594,6 +611,8 @@
             border-radius: 50px;
 
             td {
+                font-size: 13px;
+
                 &:first-child {
                     border-radius: 50px 0px 0px 50px;
                 }
@@ -602,6 +621,15 @@
                     border-radius: 0px 50px 50px 0px;
                 }
             }
+        }
+    }
+
+    .scheduled-sport {
+        width: fit-content !important;
+        max-width: 120px !important;
+
+        .sport-icon-div {
+            display: none !important;
         }
     }
 }
