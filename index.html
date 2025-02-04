@@ -1,0 +1,1352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/nrich-favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/tabler-icons.min.css">
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body onresize="autoCollapse()">
+    <div class="wrapper w-100 vh-100 d-flex" id="wrapper">
+        <div class="enrich-sidebar" id="enrich-sidebar">
+            <div class="card enrich-card">
+                <div class="title-row">
+                    <img src="./assets/img/logo.png" alt="logo" class="img-fluid nrc-logo-img">
+                    <img src="./assets/img/logo-sm2.png" alt="logo" class="img-fluid nrc-logo-img-collapsed rounded-2">
+                    <!-- <button class="btn btn-transparent enrich-toggle-sidebar" onclick="toggleClass()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dot text-color-light">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        </svg>
+                    </button> -->
+                    <button class="btn btn-transparent enrich-toggle-sidebar" onclick="toggleClass()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 6l-6 6l6 6" />
+                        </svg>
+                    </button>
+
+                </div>
+                <div class="profile-row">
+                    <div class="welcome-avatar">
+                        <img src="./assets/img/enrich-welcome.png" alt="wnrich-welcome" class="img-fluid welcome-img">
+                    </div>
+                    <h4 class="welcome-name">Hello Allan</h4>
+                    <p class="welcome-message"><img src="./assets/img/enrich-sun.png" alt="sun"> Good morning</p>
+                </div>
+                <div class="menu-row my-3">
+                    <ul class="main-menu">
+                        <li class="menu-list-item active"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-graph">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                        <path d="M7 14l3 -3l2 2l3 -3l2 2" />
+                                    </svg> </span>
+                                <span class="menu-name">Dashboard</span>
+                            </a></li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                        <path d="M16 3l0 4" />
+                                        <path d="M8 3l0 4" />
+                                        <path d="M4 11l16 0" />
+                                        <path d="M8 15h2v2h-2z" />
+                                    </svg></span>
+                                <span class="menu-name">Calendar</span>
+                            </a></li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                                        <path d="M16 3v4" />
+                                        <path d="M8 3v4" />
+                                        <path d="M4 11h16" />
+                                        <path d="M7 14h.013" />
+                                        <path d="M10.01 14h.005" />
+                                        <path d="M13.01 14h.005" />
+                                        <path d="M16.015 14h.005" />
+                                        <path d="M13.015 17h.005" />
+                                        <path d="M7.01 17h.005" />
+                                        <path d="M10.01 17h.005" />
+                                    </svg></span>
+                                <span class="menu-name">Schedular</span>
+                            </a></li>
+                        <li class="menu-list-item" id="menu-item-li-1"><a class="main-menu-anchor"
+                                data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample" onclick="toggleArrow()">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-ball-basketball">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                        <path d="M5.65 5.65l12.7 12.7" />
+                                        <path d="M5.65 18.35l12.7 -12.7" />
+                                        <path d="M12 3a9 9 0 0 0 9 9" />
+                                        <path d="M3 12a9 9 0 0 1 9 9" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Sessions</span>
+                                <span class="arrow ms-auto">
+                                    <div class="badge bg-danger rounded-pill ms-auto">5</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M9 6l6 6l-6 6" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <div class="collapse sub-menu" id="collapseExample">
+                            <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                    <span class="menu-icon me-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                        </svg>
+                                    </span>
+                                    <span class="menu-name">Completed Sessions</span>
+                                    <div class="badge bg-danger rounded-pill ms-auto">5</div>
+                                </a>
+                            </li>
+                            <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                    <span class="menu-icon me-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                        </svg>
+                                    </span>
+                                    <span class="menu-name">Pending Sessions</span>
+                                </a>
+                            </li>
+                        </div>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Parents</span>
+                                <div class="badge bg-danger rounded-pill ms-auto">5</div>
+                            </a>
+                        </li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-users">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Students</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-plus">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                        <path d="M16 19h6" />
+                                        <path d="M19 16v6" />
+                                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                                    </svg></span>
+                                <span class="menu-name">Instructors</span>
+                            </a></li>
+
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-inbox">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                        <path d="M4 13h3l3 3h4l3 -3h3" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Chat</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="enrich-container vh-100 w-100">
+                <div class="top-nav">
+                    <div class="blur-background d-flex align-items-center justify-content-between">
+                        <div class="business-dropdown">
+                            <div class="dropdown enrich-business-dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="enrich-business-icon-class"
+                                        src="./assets/img/enrich-business-icon-dropdown-logo.png" alt="business-logo">
+                                    <span>FCA</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>FCA</span></button></li>
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>UNDS</span></button></li>
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>HHS</span></button></li>
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>Argus</span></button></li>
+                            </div>
+                        </div>
+                        <div class="menu-tabs">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">
+                                        <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-graph">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                                <path d="M7 14l3 -3l2 2l3 -3l2 2" />
+                                            </svg> </span>
+                                        <span class="menu-name">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                            height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                                            <path d="M16 3v4" />
+                                            <path d="M8 3v4" />
+                                            <path d="M4 11h16" />
+                                            <path d="M7 14h.013" />
+                                            <path d="M10.01 14h.005" />
+                                            <path d="M13.01 14h.005" />
+                                            <path d="M16.015 14h.005" />
+                                            <path d="M13.015 17h.005" />
+                                            <path d="M7.01 17h.005" />
+                                            <path d="M10.01 17h.005" />
+                                        </svg></span>
+                                    <span class="menu-name">Schedular</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                                <path d="M16 3l0 4" />
+                                                <path d="M8 3l0 4" />
+                                                <path d="M4 11l16 0" />
+                                                <path d="M8 15h2v2h-2z" />
+                                            </svg></span>
+                                        <span class="menu-name">Calendar</span>
+                                    </a>
+                                </li>                       
+                            </ul>
+                        </div>
+                        <div class="profile-dropdown">
+                            <div class="dropdown enrich-business-dropdown rounded-4">
+                                <button class="btn btn-transparent p-0 rounded-4" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="enrich-business-icon-class rounded-4" src="./assets/img/boy_tqlyfx.png"
+                                        alt="profile-logo">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item px-2 rounded-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0 me-2">
+                                                <div class="avatar">
+                                                    <img src="./assets/img/boy_tqlyfx.png" alt=""
+                                                        class="enrich-business-icon-class rounded-4">
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 avatar-details">
+                                                <h6 class="mb-0">John Doe</h6>
+                                                <small class="text-muted">Admin</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><button class="dropdown-item" type="button"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-user text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            </svg> My Profile</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-settings text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                                <path d="M12 10.5v1.5" />
+                                                <path d="M12 16v1.5" />
+                                                <path d="M15.031 12.25l-1.299 .75" />
+                                                <path d="M10.268 15l-1.3 .75" />
+                                                <path d="M15 15.803l-1.285 -.773" />
+                                                <path d="M10.285 12.97l-1.285 -.773" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path
+                                                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                            </svg>
+                                            Privacy Policy</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-stack text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                <path d="M5 21h14" />
+                                                <path d="M5 18h14" />
+                                                <path d="M5 15h14" />
+                                            </svg>
+                                            Terms and Conditions</button></li>
+                                    <li><button
+                                            class="btn btn-danger dropdown-item text-center bg-danger rounded-2 d-flex align-items-center justify-content-center text-white py-2 my-2"
+                                            type="button">Logout
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                                <path d="M9 12h12l-3 -3" />
+                                                <path d="M18 15l3 -3" />
+                                            </svg>
+                                        </button></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="dropdown enrich-business-dropdown rounded-4 enrich-notification rounded-4 d-flex px-2">
+                                <button class="btn btn-transparent p-0 rounded-4" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-bell text-color-light">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                                        <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item px-2 rounded-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0 me-2">
+                                                <div class="avatar">
+                                                    <img src="./assets/img/boy_tqlyfx.png" alt=""
+                                                        class="enrich-business-icon-class rounded-4">
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-0">John Doe</h6>
+                                                <small class="text-muted">Admin</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><button class="dropdown-item" type="button"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-user text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            </svg> My Profile</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-settings text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                                <path d="M12 10.5v1.5" />
+                                                <path d="M12 16v1.5" />
+                                                <path d="M15.031 12.25l-1.299 .75" />
+                                                <path d="M10.268 15l-1.3 .75" />
+                                                <path d="M15 15.803l-1.285 -.773" />
+                                                <path d="M10.285 12.97l-1.285 -.773" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path
+                                                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                            </svg>
+                                            Privacy Policy</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-stack text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                <path d="M5 21h14" />
+                                                <path d="M5 18h14" />
+                                                <path d="M5 15h14" />
+                                            </svg>
+                                            Terms and Conditions</button></li>
+                                    <li><button
+                                            class="btn btn-danger dropdown-item text-center bg-danger rounded-2 d-flex align-items-center justify-content-center text-white py-1"
+                                            type="button">Logout
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                                <path d="M9 12h12l-3 -3" />
+                                                <path d="M18 15l3 -3" />
+                                            </svg>
+                                        </button></li>
+                                </ul>
+                            </div>
+                            <div class="enrich-theme-button rounded-4 rounded-4 d-flex px-2">
+                                <button class="btn btn-transparent p-0 rounded-4" type="switch" data-switch-dark>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-moon text-color-light">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-div">
+                    <div class="row analytics-row">
+                        <div class="col-xl-3 col-md-6 col-12 mb-4">
+                            <div class="card enrich-stats-card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="./assets/img/fox-animated.png" alt="card-img"
+                                            class="card-img img-fluid">
+                                    </div>
+                                    <div class="col-10 card-center-div">
+                                        <p class="title">Total Instructors</p>
+                                        <p class="value">22</p>
+                                        <p class="helper-text"><span class="status-badge">+4.2%</span> from last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-12 mb-4">
+                            <div class="card enrich-stats-card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="./assets/img/robot-animated.png" alt="card-img"
+                                            class="card-img img-fluid">
+                                    </div>
+                                    <div class="col-10 card-center-div">
+                                        <p class="title">Total Parents</p>
+                                        <p class="value">32</p>
+                                        <p class="helper-text"><span class="status-badge">+4.2%</span> from last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-12 mb-4">
+                            <div class="card enrich-stats-card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="./assets/img/animal-animated.png" alt="card-img"
+                                            class="card-img img-fluid">
+                                    </div>
+                                    <div class="col-10 card-center-div">
+                                        <p class="title">Total Students</p>
+                                        <p class="value">22</p>
+                                        <p class="helper-text"><span class="status-badge">+4.2%</span> from last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-12 mb-4">
+                            <div class="card enrich-stats-card">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="./assets/img/football-animated.png" alt="card-img"
+                                            class="card-img img-fluid">
+                                    </div>
+                                    <div class="col-10 card-center-div">
+                                        <p class="title">Total Sessions</p>
+                                        <p class="value">22</p>
+                                        <p class="helper-text"><span class="status-badge">+4.2%</span> from last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row stats-quick-links-row">
+                        <div class="col-xl-8 col-12 mb-4">
+                            <div class="card enrich-card">
+                                <div class="heading-row">
+                                    <img src="./assets/img/_round med prototype2.png" alt="badge-img"
+                                        class="img-fluid heading-img">
+                                    <h6 class="title">What’s Happening</h6>
+                                </div>
+                                <div class="card sub-card">
+                                    <div class="row sub-card-stats-row">
+                                        <div class="col-md-4 col-sm-6 col-12 sub-stat-card">
+                                            <div class="row align-items-end">
+                                                <div class="col-9">
+                                                    <div class="sub-title">
+                                                        Games & Events
+                                                    </div>
+                                                    <div class="value">
+                                                        400
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="./assets/img/rugby.png" alt="supporting-img"
+                                                        class="supporting-img img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 col-12 sub-stat-card">
+                                            <div class="row align-items-end">
+                                                <div class="col-9">
+                                                    <div class="sub-title">
+                                                        Reg. Deadline
+                                                    </div>
+                                                    <div class="value">
+                                                        75
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="./assets/img/r Ribbon4.png" alt="supporting-img"
+                                                        class="supporting-img img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 col-12 sub-stat-card">
+                                            <div class="row align-items-end">
+                                                <div class="col-9">
+                                                    <div class="sub-title">
+                                                        Payments Due
+                                                    </div>
+                                                    <div class="value">
+                                                        $ 8000
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="./assets/img/Financial Goal 1.png" alt="supporting-img"
+                                                        class="supporting-img img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 col-12 sub-stat-card">
+                                            <div class="row align-items-end">
+                                                <div class="col-9">
+                                                    <div class="sub-title">
+                                                        New Members
+                                                    </div>
+                                                    <div class="value">
+                                                        200
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="./assets/img/cap.png" alt="supporting-img"
+                                                        class="supporting-img img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 col-12 sub-stat-card">
+                                            <div class="row align-items-end">
+                                                <div class="col-9">
+                                                    <div class="sub-title">
+                                                        Registrations
+                                                    </div>
+                                                    <div class="value">
+                                                        400
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="./assets/img/Financial Security 1.png"
+                                                        alt="supporting-img" class="supporting-img img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 col-12 sub-stat-card">
+                                            <div class="row align-items-end">
+                                                <div class="col-9">
+                                                    <div class="sub-title">
+                                                        Collected
+                                                    </div>
+                                                    <div class="value">
+                                                        $ 21000
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="./assets/img/rugby.png" alt="supporting-img"
+                                                        class="supporting-img img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-12 mb-4">
+                            <div class="card enrich-card">
+                                <div class="heading-row">
+                                    <h6 class="title">Quick Links</h6>
+                                </div>
+                                <div class="quick-links-card">
+                                    <div class="card-button">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/img/message.png" alt="3d-icon"
+                                                class="icons-3d img-fluid">
+                                            <div class="anchor-link-div">
+                                                <a href="" class="anchor-link">Compose a message</a>
+                                                <p class="anchor-helper-text mb-0">Send email and/or Text to your
+                                                    memebers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-button">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/img/announcement.png" alt="3d-icon"
+                                                class="icons-3d img-fluid">
+                                            <div class="anchor-link-div">
+                                                <a href="" class="anchor-link">Post an announcement</a>
+                                                <p class="anchor-helper-text mb-0">Send email and/or Text to your
+                                                    memebers
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-button">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="./assets/img/calander.png" alt="3d-icon"
+                                                class="icons-3d img-fluid">
+                                            <div class="anchor-link-div">
+                                                <a href="" class="anchor-link">Create new program</a>
+                                                <p class="anchor-helper-text mb-0">Send email and/or Text to your
+                                                    memebers
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row enrich-table-row">
+                        <div class="col-12">
+                            <div class="card enrich-card">
+                                <div class="heading-row">
+                                    <img src="./assets/img/Clock 1.png" alt="badge-img" class="img-fluid heading-img">
+                                    <h6 class="title">Upcoming Sessions</h6>
+                                </div>
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-borderless enrich-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Sesssion</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Progress</th>
+                                                <th scope="col">Instructor</th>
+                                                <th scope="col">Students</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="col">92</td>
+                                                <td scope="col">Yvonne Emberton</td>
+                                                <td scope="col">
+                                                    <div class="date-column"><span class="start-date">24/08/2024</span>
+                                                        <span class="enrich-date-seperator"><span
+                                                                class="text-seperator">To</span></span>
+                                                        <span class="end-date">24/08/2024</span>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar"
+                                                            aria-label="Basic example" style="width: 50%"
+                                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="instructors">
+                                                        <a href=""><img src="./assets/img/1.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/2.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/3.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">4</td>
+                                                <td scope="col">
+                                                    <div class="actions">
+                                                        <div class="dropdown enrich-dropdown">
+                                                            <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical">
+                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                    <path
+                                                                        d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path
+                                                                        d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu shadow-sm">
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-list-details">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path d="M13 5h8" />
+                                                                            <path d="M13 9h5" />
+                                                                            <path d="M13 15h8" />
+                                                                            <path d="M13 19h5" />
+                                                                            <path
+                                                                                d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                            <path
+                                                                                d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                        </svg>
+                                                                        Details</a></li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path
+                                                                                d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                                                                            <path
+                                                                                d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                                                                        </svg>
+                                                                        Copy</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <button class="btn enrich-btn-transparent" type="button"
+                                                            class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                                <path d="M13.5 6.5l4 4" />
+                                                            </svg></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">15</td>
+                                                <td scope="col">Wilmar Bourton</td>
+                                                <td scope="col">
+                                                    <div class="date-column"><span class="start-date">24/08/2024</span>
+                                                        <span class="enrich-date-seperator"><span
+                                                                class="text-seperator">To</span></span>
+                                                        <span class="end-date">24/08/2024</span>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar"
+                                                            aria-label="Basic example" style="width: 80%"
+                                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="instructors">
+                                                        <a href=""><img src="./assets/img/4.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/5.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/6.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">1</td>
+                                                <td scope="col">
+                                                    <div class="actions">
+                                                        <div class="dropdown enrich-dropdown">
+                                                            <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical">
+                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                    <path
+                                                                        d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path
+                                                                        d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu shadow-sm">
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-list-details">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path d="M13 5h8" />
+                                                                            <path d="M13 9h5" />
+                                                                            <path d="M13 15h8" />
+                                                                            <path d="M13 19h5" />
+                                                                            <path
+                                                                                d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                            <path
+                                                                                d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                        </svg>
+                                                                        Details</a></li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path
+                                                                                d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                                                                            <path
+                                                                                d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                                                                        </svg>
+                                                                        Copy</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <button class="btn enrich-btn-transparent"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                                <path d="M13.5 6.5l4 4" />
+                                                            </svg></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">58</td>
+                                                <td scope="col">Wendi Somerlie</td>
+                                                <td scope="col">
+                                                    <div class="date-column"><span class="start-date">24/08/2024</span>
+                                                        <span class="enrich-date-seperator"><span
+                                                                class="text-seperator">To</span></span>
+                                                        <span class="end-date">24/08/2024</span>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar"
+                                                            aria-label="Basic example" style="width: 75%"
+                                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="instructors">
+                                                        <a href=""><img src="./assets/img/7.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/8.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/9.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">3</td>
+                                                <td scope="col">
+                                                    <div class="actions">
+                                                        <div class="dropdown enrich-dropdown">
+                                                            <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical">
+                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                    <path
+                                                                        d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path
+                                                                        d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu shadow-sm">
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-list-details">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path d="M13 5h8" />
+                                                                            <path d="M13 9h5" />
+                                                                            <path d="M13 15h8" />
+                                                                            <path d="M13 19h5" />
+                                                                            <path
+                                                                                d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                            <path
+                                                                                d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                        </svg>
+                                                                        Details</a></li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path
+                                                                                d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                                                                            <path
+                                                                                d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                                                                        </svg>
+                                                                        Copy</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <button class="btn enrich-btn-transparent"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                                <path d="M13.5 6.5l4 4" />
+                                                            </svg></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">44</td>
+                                                <td scope="col">Washington Bygraves</td>
+                                                <td scope="col">
+                                                    <div class="date-column"><span class="start-date">24/08/2024</span>
+                                                        <span class="enrich-date-seperator"><span
+                                                                class="text-seperator">To</span></span>
+                                                        <span class="end-date">24/08/2024</span>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar"
+                                                            aria-label="Basic example" style="width: 35%"
+                                                            aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="instructors">
+                                                        <a href=""><img src="./assets/img/1.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/3.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/5.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">6</td>
+                                                <td scope="col">
+                                                    <div class="actions">
+                                                        <div class="dropdown enrich-dropdown">
+                                                            <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical">
+                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                    <path
+                                                                        d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path
+                                                                        d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu shadow-sm">
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-list-details">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path d="M13 5h8" />
+                                                                            <path d="M13 9h5" />
+                                                                            <path d="M13 15h8" />
+                                                                            <path d="M13 19h5" />
+                                                                            <path
+                                                                                d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                            <path
+                                                                                d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                        </svg>
+                                                                        Details</a></li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path
+                                                                                d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                                                                            <path
+                                                                                d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                                                                        </svg>
+                                                                        Copy</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <button class="btn enrich-btn-transparent"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                                <path d="M13.5 6.5l4 4" />
+                                                            </svg></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="col">52</td>
+                                                <td scope="col">Tommie O'Corr</td>
+                                                <td scope="col">
+                                                    <div class="date-column"><span class="start-date">24/08/2024</span>
+                                                        <span class="enrich-date-seperator"><span
+                                                                class="text-seperator">To</span></span>
+                                                        <span class="end-date">24/08/2024</span>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar"
+                                                            aria-label="Basic example" style="width: 92%"
+                                                            aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">
+                                                    <div class="instructors">
+                                                        <a href=""><img src="./assets/img/2.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/4.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                        <a href=""><img src="./assets/img/6.png" alt="instructor-avatar"
+                                                                class="instructor-avatar"></a>
+                                                    </div>
+                                                </td>
+                                                <td scope="col">3</td>
+                                                <td scope="col">
+                                                    <div class="actions">
+                                                        <div class="dropdown enrich-dropdown">
+                                                            <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical">
+                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                    <path
+                                                                        d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path
+                                                                        d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                    <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu shadow-sm">
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-list-details">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path d="M13 5h8" />
+                                                                            <path d="M13 9h5" />
+                                                                            <path d="M13 15h8" />
+                                                                            <path d="M13 19h5" />
+                                                                            <path
+                                                                                d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                            <path
+                                                                                d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                                                                        </svg>
+                                                                        Details</a></li>
+                                                                <li><a class="dropdown-item" href="#">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24" height="24" viewBox="0 0 24 24"
+                                                                            fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
+                                                                            <path stroke="none" d="M0 0h24v24H0z"
+                                                                                fill="none" />
+                                                                            <path
+                                                                                d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                                                                            <path
+                                                                                d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                                                                        </svg>
+                                                                        Copy</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <button class="btn enrich-btn-transparent"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                                <path d="M13.5 6.5l4 4" />
+                                                            </svg></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade enrich-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Session</h1>
+                    <button type="button" class="btn-close enrich-btn-transparent " data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-note">
+                    <span class="modal-info-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                            <path d="M12 9v4" />
+                            <path d="M12 16v.01" />
+                        </svg>
+                    </span> <span class="note-text">Please type carefully and fill out the
+                        form with the program's details. You can't edit these details once you submitted the
+                        form.</span>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label enrich-form-label">Session Name</label>
+                        <input type="text" class="form-control enrich-form-control" id="exampleFormControlInput1"
+                            placeholder="Enter Session Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label enrich-form-label">Session Short
+                            Name</label>
+                        <input type="text" class="form-control enrich-form-control" id="exampleFormControlInput2"
+                            placeholder="Enter Session Short Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label enrich-form-label">Session
+                            Description</label>
+                        <textarea class="form-control enrich-form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Enter Session Description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput3" class="form-label enrich-form-label">Session
+                            Price</label>
+                        <input type="number" class="form-control enrich-form-control" id="exampleFormControlInput3"
+                            placeholder="Enter Session Price">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn enrich-btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn enrich-btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        function toggleClass() {
+            var element = document.getElementById("wrapper");
+            element.classList.toggle("collapsed");
+        }
+    </script>
+    <script>
+        function toggleArrow() {
+            var element = document.getElementById("menu-item-li-1");
+            element.classList.toggle("open");
+        }
+    </script>
+    <script>
+        function autoCollapse() {
+            var w = window.innerWidth;
+
+            if (w <= 1296) {
+                document.getElementById("wrapper").classList.add("collapsed");
+            }
+        }
+    </script>
+    <script>
+        window.onload = function detectTablet() {
+            var w = window.innerWidth;
+            console.log(w);
+            if (w <= 1296 & w >= 768) {
+                document.getElementById("wrapper").classList.add("collapsed");
+            }
+        };
+    </script>
+    <script>
+        document.querySelector('[data-switch-dark]').addEventListener('click', function () {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+</body>
+
+</html>

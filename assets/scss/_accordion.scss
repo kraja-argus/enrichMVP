@@ -1,0 +1,442 @@
+@import 'variables';
+
+.enrich-accordion {
+    --bs-accordion-border-color: none;
+    --bs-accordion-bg: none;
+
+    .accordion-item {
+        border-radius: 24px;
+        margin-bottom: 6px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .accordion-header {
+            border-radius: 10px;
+
+            .accordion-button {
+                border-radius: 10px;
+                padding: 6px 12px;
+                color: $color-white;
+                display: flex;
+                align-items: center;
+
+                .accordion-title {
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+                    width: 79%;
+
+                    .icons-block {
+                        display: flex;
+                        align-items: center;
+                        white-space: nowrap;
+                        flex-wrap: nowrap;
+                        gap: 6px;
+                        width: inherit;
+                        max-width: fit-content;
+
+                    }
+
+                    .accordion-img {
+                        border-radius: 100%;
+                        width: 24px;
+                        height: 24px;
+                        object-fit: cover;
+                    }
+
+
+                    .couch {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding-right: 10px;
+
+                        .couch-name {
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20px;
+                        }
+
+                        .couch-designation {
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                .icons-div {
+                    display: flex;
+                    align-items: center;
+                    color: $color-white;
+                    gap: 6px;
+                    margin-left: auto;
+                    justify-content: end;
+
+                    .close-button {
+                        background-color: #FFFFFF54;
+                        border-radius: 50%;
+                        padding: 4px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .arrow-icon {
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+
+                &::after {
+                    display: none;
+                    background-image: none;
+                }
+
+                &:focus {
+                    border-color: transparent;
+                    box-shadow: none;
+                }
+            }
+
+            .collapsed {
+                .icons-div {
+                    .arrow-icon {
+                        transform: rotate(180deg);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+
+
+            .accordion-head-couch.collapsed {
+                background-color: $accordion-green;
+                color: $color-white;
+                border-radius: 10px;
+
+                .icons-div {
+                    display: flex;
+                    align-items: center;
+                    color: $color-white;
+                    gap: 6px;
+                    margin-left: auto;
+                    justify-content: end;
+
+                    .close-button {
+                        background-color: #FFFFFF54;
+                        border-radius: 50%;
+                        padding: 4px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .arrow-icon {
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .accordion-assistant-couch.collapsed {
+                background-color: $accordion-blue;
+                color: $color-white;
+                border-radius: 10px;
+
+                .icons-div {
+                    display: flex;
+                    align-items: center;
+                    color: $color-white;
+                    gap: 6px;
+                    margin-left: auto;
+                    justify-content: end;
+
+                    .close-button {
+                        background-color: #FFFFFF54;
+                        border-radius: 50%;
+                        padding: 4px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .arrow-icon {
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .accordion-pending-couch.collapsed {
+                background-color: $accordion-yellow;
+                color: $color-white;
+                border-radius: 10px;
+
+                .icons-div {
+                    display: flex;
+                    align-items: center;
+                    color: $color-white;
+                    gap: 6px;
+                    margin-left: auto;
+                    justify-content: end;
+
+                    .close-button {
+                        background-color: #FFFFFF54;
+                        border-radius: 50%;
+                        padding: 4px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .arrow-icon {
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .accordion-head-couch,
+            .accordion-assistant-couch,
+            .accordion-pending-couch {
+                background-color: var(--card-background-solid);
+                border-radius: 10px 10px 0 0;
+                color: var(--color-text-heading);
+
+                .icons-div {
+                    color: var(--color-text-heading);
+
+                    .close-button {
+                        background-color: lightsteelblue;
+                        color: white;
+                    }
+                }
+            }
+
+            .accordion-assistant-couch.collapsed {
+                background-color: $accordion-blue;
+                color: $color-white;
+            }
+
+            .accordion-pending-couch.collapsed {
+                background-color: $accordion-yellow;
+                color: $color-white;
+                border: 1px dashed var(--color-text-heading);
+            }
+        }
+
+        .accordion-collapse.collapse.show {
+            background: var(--card-background-solid) !important;
+            margin-bottom: 10px;
+            border-radius: 0 0 10px 10px;
+            color: var(--color-text);
+        }
+    }
+
+}
+
+.enrich-accordion-2 {
+    --bs-accordion-border-color: none;
+    --bs-accordion-bg: var(--card-background-solid);
+
+    .accordion-item {
+        border-radius: 24px;
+        margin-bottom: 6px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .accordion-header {
+            border-radius: 24px;
+
+            .accordion-button {
+                border-radius: 10px 10px 0 0;
+                padding: 6px 12px;
+                display: flex;
+                align-items: center;
+                background-color: var(--card-background-solid);
+
+                .accordion-title {
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+                    width: 79%;
+
+                    .icons-block {
+                        display: flex;
+                        align-items: center;
+                        white-space: nowrap;
+                        flex-wrap: nowrap;
+                        gap: 6px;
+                        width: inherit;
+                        max-width: fit-content;
+
+                    }
+
+                    .accordion-img {
+                        border-radius: 100%;
+                        width: 40px;
+                        height: 40px;
+                        object-fit: cover;
+                    }
+
+
+                    .couch {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding-right: 10px;
+
+                        .couch-name {
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            display: block;
+                            color: var(--color-text-heading);
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: -webkit-fill-available;
+
+                        }
+
+                        .couch-designation {
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            display: block;
+                            color: var(--color-text-heading);
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: -webkit-fill-available;
+                        }
+                    }
+                }
+
+                .icons-div {
+                    display: flex;
+                    align-items: center;
+                    color: var(--color-text-heading);
+                    gap: 6px;
+                    margin-left: auto;
+                    justify-content: end;
+
+                    .close-button {
+                        background-color: #FFFFFF54;
+                        border-radius: 50%;
+                        padding: 4px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .arrow-icon {
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+
+                &::after {
+                    display: none;
+                    background-image: none;
+                }
+
+                &:focus {
+                    border-color: transparent;
+                    box-shadow: none;
+                }
+            }
+
+            .collapsed {
+                border-radius: 10px;
+
+                .icons-div {
+                    .arrow-icon {
+                        transform: rotate(180deg);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .accordion-head-couch {
+                background-color: $accordion-green;
+                color: $color-white;
+            }
+
+            .accordion-assistant-couch {
+                background-color: $accordion-blue;
+                color: $color-white;
+            }
+
+            .accordion-pending-couch {
+                background-color: $accordion-yellow;
+                color: $color-white;
+                border: 1px dashed var(--color-text-heading);
+            }
+        }
+    }
+
+    .show {
+        background-color: var(--card-background-solid);
+        --bs-accordion-border-color: var(--card-background-solid);
+        --bs-accordion-bg: var(--card-background-solid);
+
+        .accordion-body {
+            color: var(--color-text-heading);
+        }
+    }
+
+}
+
+.ownership-accordion {
+
+    .active {
+        .accordion-button.collapsed {
+            background: #00AB06;
+        }
+
+        .accordion-header {
+            .accordion-button {
+                .accordion-title {
+                    .couch {
+
+                        .couch-name,
+                        .couch-designation {
+                            color: $color-white;
+                        }
+                    }
+                }
+
+                .icons-div {
+                    a {
+                        position: absolute;
+                        top: -12px;
+                        right: 6px;
+                        border-radius: 50px;
+                        padding: 3px 6px !important;
+                        font-size: 12px;
+                        background: #2335FF;
+                    }
+                }
+            }
+        }
+    }
+
+    .accordion-item {
+        box-shadow: 4px 8px 80px 0px #00000026;
+
+        .show {
+            border-radius: 0px 0px 10px 10px;
+        }
+    }
+}

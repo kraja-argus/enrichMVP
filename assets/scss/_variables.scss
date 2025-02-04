@@ -1,0 +1,254 @@
+//colors used
+
+$primary: #001BF0;
+$primary-light: #4155FF;
+
+$primary-background-light: #F1F2FA;
+$primary-background-dark: #25293c;
+
+$text-color-light: #9094A8;
+$text-color-dark: #083A50;
+
+$navbar-text-dark: #1C1B24;
+$navbar-text-light: #f5f5f5;
+
+$header-title-light: #444050;
+$header-title-dark: #cfcde4;
+
+$sub-title-color: #8d8a94;
+$stats-card-color: #D8DCFF;
+
+$border-color: #e6e6e8;
+
+$badge-background: rgba(12, 255, 226, 0.33);
+
+$form-border-color: #f3f2f3;
+$form-background: #f4f4f4;
+
+$table-text-color-light: #6D6B77;
+$table-text-color-dark: #e9e9e9;
+$table-date-background: #f0f0f0;
+
+$scrollbar-track-background: #f1f1f1;
+$scrollbar-thumb-background: #999999;
+$scrollbar-thumb-hover-background: #888888;
+
+$gradient: linear-gradient(94.23deg, rgba(65, 86, 255, 0.045) 0.71%, rgba(84, 147, 221, 0.055) 100%);
+$button-gradient: linear-gradient(138.57deg, #4156FF 26.49%, #5493DD 108.09%);
+$active-gradient: linear-gradient(126.21deg, #3046FB 8.58%, #075BFF 93.11%), #D9D9D9;
+
+$title-color: #111827;
+$note-background: rgba(229, 236, 246, 0.5);
+$note-background-dark: rgba(31, 31, 31, 0.5);
+$note-color: rgba(0, 0, 0, 0.6);
+$note-color-dark: rgba(255, 255, 255, 0.6);
+$report-header: #747682;
+$report-value: #03091D;
+
+$grid-header: #5D6588;
+$avatar-background: #CBC5F0;
+
+$accent-color-blue: #1C60E8;
+$accent-color-blue-light: #F3F7FF;
+$accent-color-magenta: #FA16D6;
+$accent-color-magenta-light: #FFF3FD;
+$accent-color-green: #23C55E;
+$accent-color-green-light: #F4FCF7;
+$accent-color-golden: #C5B523;
+$accent-color-golden-light: #FFFDED;
+$accent-color-red: #ff4c51;
+$accent-color-dark-red: #e64449;
+$sidebar-session-background: #E8F2FE;
+$lime: #EDF8E3;
+
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(255, 255, 255);
+$color-gray-light: rgba($color-white, .15);
+$color-gray-dark: rgba($color-black, .15);
+
+$card-background: rgba(47, 51, 73, 0.88);
+$card-background-solid: rgba(47, 51, 73, 1);
+
+$transparent: traparent;
+
+$accordion-green: #00A33B;
+$accordion-blue: #1C50FB;
+$accordion-yellow :#F8AE00;
+
+$card-dark-background: #161716;
+$calendar-green: #4D9D94;
+$calendar-sand-purple: #9D4D95;
+$calendar-sand-red: #B23032;
+// colors as variables
+
+:root {
+    --color-page-background: #{$primary-background-light};
+    --color-text: #{$text-color-light};
+    --color-primary: #{$primary};
+    --card-background: #{$color-white};
+    --border-color: #{$border-color};
+    --card-background-solid: #{$color-white};
+    --navbar-title-text: #{$navbar-text-dark};
+    --color-text-heading: #{$text-color-dark};
+    --header-title: #{$header-title-light};
+    --table-text-color: #{$table-text-color-light};
+    --form-border-color: #{$form-border-color};
+    --modal-title-color: #{$title-color};
+    --note-background: #{$note-background};
+    --note-color: #{$note-color};
+    --form-background: #{$form-background};
+    --grid-header-color: #{$grid-header};
+    --outline-button-background: transparent;
+    --sidebar-session-background: #{$sidebar-session-background};
+}
+
+.dark {
+    --color-page-background: #{$primary-background-dark};
+    --color-text: #{$text-color-light};
+    --color-primary: #{$primary};
+    --card-background: #{$card-background};
+    --border-color: #{$card-background};
+    --card-background-solid: #{$card-background-solid};
+    --navbar-title-text: #{$navbar-text-light};
+    --color-text-heading: #{$border-color};
+    --header-title: #{$header-title-dark};
+    --table-text-color: #{$table-text-color-dark};
+    --form-border-color: #{$primary-background-dark};
+    --modal-title-color: #{$table-text-color-dark};
+    --note-background: #{$note-background-dark};
+    --note-color: #{$note-color-dark};
+    --form-background: #{$primary-background-dark};
+    --grid-header-color: #{$note-color-dark};
+    --outline-button-background: #{$primary-background-dark};
+    --sidebar-session-background: #{sidebar-session-background};
+
+
+
+
+    .btn-close {
+        filter: invert(1);
+
+        &:hover {
+            background-color: $primary-background-light;
+        }
+    }
+
+    .main-content {
+        .content-div {
+            .enrich-stats-card {
+                background: $card-background !important;
+                border-color: $card-background !important;
+            }
+        }
+    }
+
+    .report-row {
+
+        .report-card {
+            background: $primary-background-dark !important;
+            border-color: $primary-background-dark !important;
+
+            .header-row {
+                color: $table-text-color-dark;
+                opacity: 0.5;
+            }
+
+            .report-value {
+                color: $table-text-color-dark;
+            }
+        }
+    }
+
+    .enrich-table {
+        .text-seperator {
+            color: filter invert(1);
+        }
+    }
+
+    .enrich-btn-primary-outline {
+        color: $table-date-background;
+        border-color: $primary-background-dark;
+    }
+
+    .file-upload-div {
+        .btn-transparent {
+            background-color: $grid-header !important;
+        }
+    }
+
+    .session-card {
+        background-color: $primary-background-dark;
+    }
+
+    .date-and-time-div {
+        background-color: $primary-background-dark;
+        color: $stats-card-color;
+
+        .enrich-date-seperator {
+            .text-seperator {
+                color: $stats-card-color;
+            }
+        }
+
+        .start-date,
+        .end-date {
+            color: $stats-card-color;
+
+
+            .date {
+                color: $stats-card-color;
+            }
+
+            .time {
+                color: $stats-card-color;
+            }
+        }
+    }
+
+    .sidebar-session-card {
+        background-color: $card-dark-background;
+    }
+
+    .enrich-slim-pill-tabs {
+        background: $card-dark-background;
+    }
+
+    .couch-radio-with-img,
+    .couch-radio-without-img {
+        border-color: $card-dark-background;
+    }
+
+    .enrich-calendar .calendar-div .month-view .date {
+        background-color: $card-dark-background;
+    }
+
+    .widget-3 {
+        .script-text {
+            background-color: $card-dark-background;
+        }
+    }
+
+    .form-check-input:checked[type=checkbox] {
+        filter: invert(1);
+        background-color: $color-black;
+    }
+
+    .placeholder {
+        background: $primary-background-dark;
+    }
+
+    .note-card {
+        .user-card {
+        background: $primary-background-dark;
+        }
+    }
+
+    .checkbox-selection .form-check-input:checked[type=checkbox] {
+        border: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    }
+
+    .barcode {
+     filter: invert(1);
+    }
+}

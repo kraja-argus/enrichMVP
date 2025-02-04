@@ -1,0 +1,2152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add New Instructor</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/nrich-favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/tabler-icons.min.css">
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body onresize="autoCollapse()">
+    <div class="wrapper w-100 vh-100 d-flex" id="wrapper">
+        <div class="enrich-sidebar" id="enrich-sidebar">
+            <div class="card enrich-card">
+                <div class="title-row">
+                    <img src="./assets/img/logo.png" alt="logo" class="img-fluid nrc-logo-img">
+                    <img src="./assets/img/logo-sm2.png" alt="logo" class="img-fluid nrc-logo-img-collapsed rounded-2">
+                    <!-- <button class="btn btn-transparent enrich-toggle-sidebar" onclick="toggleClass()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dot text-color-light">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        </svg>
+                    </button> -->
+                    <button class="btn btn-transparent enrich-toggle-sidebar" onclick="toggleClass()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 6l-6 6l6 6" />
+                        </svg>
+                    </button>
+
+                </div>
+                <div class="profile-row">
+                    <div class="welcome-avatar">
+                        <img src="./assets/img/enrich-welcome.png" alt="wnrich-welcome" class="img-fluid welcome-img">
+                    </div>
+                    <h4 class="welcome-name">Hello Allan</h4>
+                    <p class="welcome-message"><img src="./assets/img/enrich-sun.png" alt="sun"> Good morning</p>
+                </div>
+                <div class="menu-row my-3">
+                    <ul class="main-menu">
+                        <li class="menu-list-item active"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-graph">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                        <path d="M7 14l3 -3l2 2l3 -3l2 2" />
+                                    </svg> </span>
+                                <span class="menu-name">Dashboard</span>
+                            </a></li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                        <path d="M16 3l0 4" />
+                                        <path d="M8 3l0 4" />
+                                        <path d="M4 11l16 0" />
+                                        <path d="M8 15h2v2h-2z" />
+                                    </svg></span>
+                                <span class="menu-name">Calendar</span>
+                            </a></li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                                        <path d="M16 3v4" />
+                                        <path d="M8 3v4" />
+                                        <path d="M4 11h16" />
+                                        <path d="M7 14h.013" />
+                                        <path d="M10.01 14h.005" />
+                                        <path d="M13.01 14h.005" />
+                                        <path d="M16.015 14h.005" />
+                                        <path d="M13.015 17h.005" />
+                                        <path d="M7.01 17h.005" />
+                                        <path d="M10.01 17h.005" />
+                                    </svg></span>
+                                <span class="menu-name">Schedular</span>
+                            </a></li>
+                        <li class="menu-list-item" id="menu-item-li-1"><a class="main-menu-anchor"
+                                data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample" onclick="toggleArrow()">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-ball-basketball">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                        <path d="M5.65 5.65l12.7 12.7" />
+                                        <path d="M5.65 18.35l12.7 -12.7" />
+                                        <path d="M12 3a9 9 0 0 0 9 9" />
+                                        <path d="M3 12a9 9 0 0 1 9 9" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Sessions</span>
+                                <span class="arrow ms-auto">
+                                    <div class="badge bg-danger rounded-pill ms-auto">5</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M9 6l6 6l-6 6" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <div class="collapse sub-menu" id="collapseExample">
+                            <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                    <span class="menu-icon me-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                        </svg>
+                                    </span>
+                                    <span class="menu-name">Completed Sessions</span>
+                                    <div class="badge bg-danger rounded-pill ms-auto">5</div>
+                                </a>
+                            </li>
+                            <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                    <span class="menu-icon me-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-circle">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                        </svg>
+                                    </span>
+                                    <span class="menu-name">Pending Sessions</span>
+                                </a>
+                            </li>
+                        </div>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Parents</span>
+                                <div class="badge bg-danger rounded-pill ms-auto">5</div>
+                            </a>
+                        </li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-users">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Students</span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-plus">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                        <path d="M16 19h6" />
+                                        <path d="M19 16v6" />
+                                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                                    </svg></span>
+                                <span class="menu-name">Instructors</span>
+                            </a></li>
+
+                        <li class="menu-list-item"><a href="" class="main-menu-anchor">
+                                <span class="menu-icon me-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-inbox">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                        <path d="M4 13h3l3 3h4l3 -3h3" />
+                                    </svg>
+                                </span>
+                                <span class="menu-name">Chat</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="enrich-container vh-100 w-100">
+                <div class="top-nav">
+                    <div class="blur-background d-flex align-items-center justify-content-between">
+                        <div class="business-dropdown">
+                            <div class="dropdown enrich-business-dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="enrich-business-icon-class"
+                                        src="./assets/img/enrich-business-icon-dropdown-logo.png" alt="business-logo">
+                                    <span>FCA</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>FCA</span></button></li>
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>UNDS</span></button></li>
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>HHS</span></button></li>
+                                    <li><button class="dropdown-item" type="button"><img
+                                                class="enrich-business-icon-class"
+                                                src="./assets/img/enrich-business-icon-dropdown-logo.png"
+                                                alt="business-logo"> <span>Argus</span></button></li>
+                            </div>
+                        </div>
+                        <div class="menu-tabs">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">
+                                        <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-graph">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M4 18v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                                <path d="M7 14l3 -3l2 2l3 -3l2 2" />
+                                            </svg> </span>
+                                        <span class="menu-name">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                                                <path d="M16 3v4" />
+                                                <path d="M8 3v4" />
+                                                <path d="M4 11h16" />
+                                                <path d="M7 14h.013" />
+                                                <path d="M10.01 14h.005" />
+                                                <path d="M13.01 14h.005" />
+                                                <path d="M16.015 14h.005" />
+                                                <path d="M13.015 17h.005" />
+                                                <path d="M7.01 17h.005" />
+                                                <path d="M10.01 17h.005" />
+                                            </svg></span>
+                                        <span class="menu-name">Schedular</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="menu-icon me-1"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-event">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                                <path d="M16 3l0 4" />
+                                                <path d="M8 3l0 4" />
+                                                <path d="M4 11l16 0" />
+                                                <path d="M8 15h2v2h-2z" />
+                                            </svg></span>
+                                        <span class="menu-name">Calendar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="profile-dropdown">
+                            <div class="dropdown enrich-business-dropdown rounded-4">
+                                <button class="btn btn-transparent p-0 rounded-4" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="enrich-business-icon-class rounded-4" src="./assets/img/boy_tqlyfx.png"
+                                        alt="profile-logo">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item px-2 rounded-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0 me-2">
+                                                <div class="avatar">
+                                                    <img src="./assets/img/boy_tqlyfx.png" alt=""
+                                                        class="enrich-business-icon-class rounded-4">
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 avatar-details">
+                                                <h6 class="mb-0">John Doe</h6>
+                                                <small class="text-muted">Admin</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><button class="dropdown-item" type="button"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-user text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            </svg> My Profile</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-settings text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                                <path d="M12 10.5v1.5" />
+                                                <path d="M12 16v1.5" />
+                                                <path d="M15.031 12.25l-1.299 .75" />
+                                                <path d="M10.268 15l-1.3 .75" />
+                                                <path d="M15 15.803l-1.285 -.773" />
+                                                <path d="M10.285 12.97l-1.285 -.773" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path
+                                                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                            </svg>
+                                            Privacy Policy</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-stack text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                <path d="M5 21h14" />
+                                                <path d="M5 18h14" />
+                                                <path d="M5 15h14" />
+                                            </svg>
+                                            Terms and Conditions</button></li>
+                                    <li><button
+                                            class="btn btn-danger dropdown-item text-center bg-danger rounded-2 d-flex align-items-center justify-content-center text-white py-2 my-2"
+                                            type="button">Logout
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                                <path d="M9 12h12l-3 -3" />
+                                                <path d="M18 15l3 -3" />
+                                            </svg>
+                                        </button></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="dropdown enrich-business-dropdown rounded-4 enrich-notification rounded-4 d-flex px-2">
+                                <button class="btn btn-transparent p-0 rounded-4" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-bell text-color-light">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                                        <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item px-2 rounded-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0 me-2">
+                                                <div class="avatar">
+                                                    <img src="./assets/img/boy_tqlyfx.png" alt=""
+                                                        class="enrich-business-icon-class rounded-4">
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-0">John Doe</h6>
+                                                <small class="text-muted">Admin</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><button class="dropdown-item" type="button"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-user text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            </svg> My Profile</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-settings text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                                <path d="M12 10.5v1.5" />
+                                                <path d="M12 16v1.5" />
+                                                <path d="M15.031 12.25l-1.299 .75" />
+                                                <path d="M10.268 15l-1.3 .75" />
+                                                <path d="M15 15.803l-1.285 -.773" />
+                                                <path d="M10.285 12.97l-1.285 -.773" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path
+                                                    d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                            </svg>
+                                            Privacy Policy</button></li>
+                                    <li><button class="dropdown-item" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-file-stack text-color-light">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                <path d="M5 21h14" />
+                                                <path d="M5 18h14" />
+                                                <path d="M5 15h14" />
+                                            </svg>
+                                            Terms and Conditions</button></li>
+                                    <li><button
+                                            class="btn btn-danger dropdown-item text-center bg-danger rounded-2 d-flex align-items-center justify-content-center text-white py-1"
+                                            type="button">Logout
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                                <path d="M9 12h12l-3 -3" />
+                                                <path d="M18 15l3 -3" />
+                                            </svg>
+                                        </button></li>
+                                </ul>
+                            </div>
+                            <div class="enrich-theme-button rounded-4 rounded-4 d-flex px-2">
+                                <button class="btn btn-transparent p-0 rounded-4" type="switch" data-switch-dark>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-moon text-color-light">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-div">
+                    <div class="row profile-layout">
+                        <div class="col-md-5">
+                            <div class="card profile-card mb-3">
+                                <div class="info-badges-div">
+                                    <div class="business-icon">
+                                        <img src="./assets/img/PSA.png" alt="business-img">
+                                    </div>
+                                    <div class="action-buttons">
+                                        <button class="btn enrich-btn-primary enrich-btn-dark" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                <path d="M13.5 6.5l4 4" />
+                                            </svg> Edit Business</button>
+                                        <button class="btn enrich-btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                <path d="M13.5 6.5l4 4" />
+                                            </svg> Change Ownership</button>
+                                    </div>
+                                </div>
+                                <div class="session-info-div" data-bs-toggle="collapse" href="#collapseExampleCard"
+                                    role="button" aria-expanded="false" aria-controls="collapseExampleCard">
+                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="session-information">
+                                                    <div class="d-flex gap-2 text-white align-items-center fw-semibold">
+                                                        <span>About THE PSA</span>
+                                                    </div>
+                                                    <div class="d-flex gap-2 text-white align-items-center small">
+                                                        <span>Our developmental youth programs are designed to improve
+                                                            the
+                                                            coordination and technique of each participant within their
+                                                            particular
+                                                            sport ...... <b>Read More</b></span>
+                                                    </div>
+                                                    <div class="white-badge-divs">
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/gmail.png" alt="gmail">
+                                                            chougranibrahim@gmail.com
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/gmail.png" alt="gmail">
+                                                            brahim@getenrich.com
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/phone.png" alt="phone">
+                                                            +213666246676
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/phone.png" alt="phone">
+                                                            5555552134
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="session-information">
+                                                    <div class="d-flex gap-2 text-white align-items-center fw-semibold">
+                                                        <span>About THE PSA</span>
+                                                    </div>
+                                                    <div class="d-flex gap-2 text-white align-items-center small">
+                                                        <span>Our developmental youth programs are designed to improve
+                                                            the
+                                                            coordination and technique of each participant within their
+                                                            particular
+                                                            sport ...... <b>Read More</b></span>
+                                                    </div>
+                                                    <div class="white-badge-divs">
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/gmail.png" alt="gmail">
+                                                            chougranibrahim@gmail.com
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/gmail.png" alt="gmail">
+                                                            brahim@getenrich.com
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/phone.png" alt="phone">
+                                                            +213666246676
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/phone.png" alt="phone">
+                                                            5555552134
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="session-information">
+                                                    <div class="d-flex gap-2 text-white align-items-center fw-semibold">
+                                                        <span>About THE PSA</span>
+                                                    </div>
+                                                    <div class="d-flex gap-2 text-white align-items-center small">
+                                                        <span>Our developmental youth programs are designed to improve
+                                                            the
+                                                            coordination and technique of each participant within their
+                                                            particular
+                                                            sport ...... <b>Read More</b></span>
+                                                    </div>
+                                                    <div class="white-badge-divs">
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/gmail.png" alt="gmail">
+                                                            chougranibrahim@gmail.com
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/gmail.png" alt="gmail">
+                                                            brahim@getenrich.com
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/phone.png" alt="phone">
+                                                            +213666246676
+                                                        </div>
+                                                        <div class="white-badges">
+                                                            <img src="./assets/img/phone.png" alt="phone">
+                                                            5555552134
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card enrich-card mb-3">
+                                <div class="widget-1">
+                                    <div class="col widget-item">
+                                        <div class="item-icon-div widget-bg-light-purple">
+                                            <img src="./assets/img/programs.png" alt="programs" class="img-fluid">
+                                        </div>
+                                        <div class="item-value">56</div>
+                                        <div class="item-name">Programs</div>
+                                    </div>
+                                    <div class="col col-seperator">
+                                        <div class="vr"></div>
+                                    </div>
+                                    <div class="col widget-item">
+                                        <div class="item-icon-div widget-bg-light-pink">
+                                            <img src="./assets/img/locations.png" alt="locations.png" class="img-fluid">
+                                        </div>
+                                        <div class="item-value">12</div>
+                                        <div class="item-name">Locations</div>
+                                    </div>
+                                    <div class="col col-seperator">
+                                        <div class="vr"></div>
+                                    </div>
+                                    <div class="col widget-item">
+                                        <div class="item-icon-div widget-bg-light-red">
+                                            <img src="./assets/img/student.png" alt="student.png" class="img-fluid">
+                                        </div>
+                                        <div class="item-value">1,012</div>
+                                        <div class="item-name">Students</div>
+                                    </div>
+                                    <div class="col col-seperator">
+                                        <div class="vr"></div>
+                                    </div>
+                                    <div class="col widget-item">
+                                        <div class="item-icon-div widget-bg-light-blue">
+                                            <img src="./assets/img/blue-cap.png" alt="blue-cap.png" class="img-fluid">
+                                        </div>
+                                        <div class="item-value">20</div>
+                                        <div class="item-name">Coaches</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card enrich-card mb-3">
+                                <div class="heading-row gap-1">
+                                    <img src="./assets/img/blue-cap.png" alt="badge-img"
+                                        class="img-fluid heading-img border-0 p-0">
+                                    <h6 class="title">Business Users (23)</h6>
+                                    <div class="ms-auto"><a href="" class="view-all-link">See all</a></div>
+                                </div>
+                                <div class="widget-2">
+                                    <div class="user-card col add-new-card" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 5l0 14" />
+                                            <path d="M5 12l14 0" />
+                                        </svg>
+                                        <div class="user-details">
+                                            <div class="user-name d-block mt-2">Add New
+                                                Admin</div>
+                                        </div>
+                                    </div>
+                                    <div class="user-card col">
+                                        <img src="./assets/img/boy_tqlyfx.png" alt="" class="user-img-avatar">
+                                        <div class="user-details">
+                                            <div class="user-name">Eliam Gradia</div>
+                                            <div class="user-designation">Admin</div>
+                                        </div>
+                                        <div class="user-actions">
+                                            <button class="btn enrich-btn-view">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                            <button class="btn enrich-btn-grey">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                    <path d="M13.5 6.5l4 4" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="user-card col">
+                                        <img src="./assets/img/boy_tqlyfx.png" alt="" class="user-img-avatar">
+                                        <div class="user-details">
+                                            <div class="user-name">Eliam Gradia</div>
+                                            <div class="user-designation">Admin</div>
+                                        </div>
+                                        <div class="user-actions">
+                                            <button class="btn enrich-btn-view">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                            <button class="btn enrich-btn-grey">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                    <path d="M13.5 6.5l4 4" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="user-card col">
+                                        <img src="./assets/img/boy_tqlyfx.png" alt="" class="user-img-avatar">
+                                        <div class="user-details">
+                                            <div class="user-name">Eliam Gradia</div>
+                                            <div class="user-designation">Admin</div>
+                                        </div>
+                                        <div class="user-actions">
+                                            <button class="btn enrich-btn-view">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                            <button class="btn enrich-btn-grey">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                    <path d="M13.5 6.5l4 4" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="user-card col">
+                                        <img src="./assets/img/boy_tqlyfx.png" alt="" class="user-img-avatar">
+                                        <div class="user-details">
+                                            <div class="user-name">Eliam Gradia</div>
+                                            <div class="user-designation">Admin</div>
+                                        </div>
+                                        <div class="user-actions">
+                                            <button class="btn enrich-btn-view">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                            <button class="btn enrich-btn-grey">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                    <path d="M13.5 6.5l4 4" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="user-card col">
+                                        <img src="./assets/img/boy_tqlyfx.png" alt="" class="user-img-avatar">
+                                        <div class="user-details">
+                                            <div class="user-name">Eliam Gradia</div>
+                                            <div class="user-designation">Admin</div>
+                                        </div>
+                                        <div class="user-actions">
+                                            <button class="btn enrich-btn-view">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                            <button class="btn enrich-btn-grey">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                                                    <path d="M13.5 6.5l4 4" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card enrich-card mb-3">
+                                <div class="heading-row gap-1">
+                                    <img src="./assets/img/widget.png" alt="badge-img"
+                                        class="img-fluid heading-img border-0 p-0">
+                                    <h6 class="title">Widget (23)</h6>
+                                    <div class="ms-auto"><a href="" class="btn enrich-btn-dark header-btn-dark">Live
+                                            Preview</a></div>
+                                </div>
+                                <div class="widget-3">
+                                    <div class="content">
+                                        To embed this widget on your website, copy the following HTML snippet and
+                                    </div>
+                                    <div class="script-text">
+                                        script id="embed-iframe" data-tags="dmv" data-id="cl5gpfv8d001ejw4hswymk809"
+                                        src="https: //test.enrichmvp.com/assets/embed/embed.bundle.js"> / script>
+
+                                        <button class="btn btn-transparent copy-btn"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                                                <path
+                                                    d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                                            </svg></button>
+                                    </div>
+                                    <div class="script-description">
+                                        <ol>
+                                            <li>
+                                                The HTML snippet can be inserted anywhere within your website's html.
+                                                Once
+                                                copied,
+                                                go to your website and paste the snippet. .. <b>Read More</b>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card enrich-card mb-3">
+                                <div class="heading-row gap-1">
+                                    <!-- <img src="./assets/img/widget.png" alt="badge-img"
+                                        class="img-fluid heading-img border-0 p-0"> -->
+                                    <h6 class="title">Onboarding Documents</h6>
+                                    <div class="ms-auto"><a class="view-all-link" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal4">See all</a></div>
+                                </div>
+                                <div class="widget-4">
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                                <div class="item-badges">
+                                                    <div class="badge badge-pill">Volunteer Must Read</div>
+                                                    <div class="badge badge-pill">Coach Must Read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                                <div class="item-badges">
+                                                    <div class="badge badge-pill">Volunteer Must Read</div>
+                                                    <div class="badge badge-pill">Coach Must Read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                                <div class="item-badges">
+                                                    <div class="badge badge-pill">Volunteer Must Read</div>
+                                                    <div class="badge badge-pill">Coach Must Read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                                <div class="item-badges">
+                                                    <div class="badge badge-pill">Volunteer Must Read</div>
+                                                    <div class="badge badge-pill">Coach Must Read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                                <div class="item-badges">
+                                                    <div class="badge badge-pill">Volunteer Must Read</div>
+                                                    <div class="badge badge-pill">Coach Must Read</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                                    <path
+                                                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="file-upload-div">
+                                        <button class="btn btn-transparent">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 5l0 14" />
+                                                <path d="M5 12l14 0" />
+                                            </svg>
+                                        </button>
+                                        <span class="position-relative">Add New Document
+                                            <input class="" type="file" id="formFile">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="dashed-seperator my-3"></div>
+                                <div class="heading-row gap-1">
+                                    <!-- <img src="./assets/img/widget.png" alt="badge-img"
+                                        class="img-fluid heading-img border-0 p-0"> -->
+                                    <h6 class="title">Coach Onboarding Submission Documents</h6>
+                                    <div class="ms-auto"><a href="" class="view-all-link">See all</a></div>
+                                </div>
+                                <div class="widget-4">
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                                    <path d="M7 11l5 5l5 -5" />
+                                                    <path d="M12 4l0 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                                    <path d="M7 11l5 5l5 -5" />
+                                                    <path d="M12 4l0 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                                    <path d="M7 11l5 5l5 -5" />
+                                                    <path d="M12 4l0 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                                    <path d="M7 11l5 5l5 -5" />
+                                                    <path d="M12 4l0 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <div class="item">
+                                            <div class="item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                                                    <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+                                                    <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6" />
+                                                    <path d="M17 18h2" />
+                                                    <path d="M20 15h-3v6" />
+                                                    <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z" />
+                                                </svg>
+                                            </div>
+                                            <div class="item-details">
+                                                <div class="item-name">Project tech requirements.pdf</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <button class="btn btn-transparent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                                    <path d="M7 11l5 5l5 -5" />
+                                                    <path d="M12 4l0 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="file-upload-div">
+                                        <button class="btn btn-transparent">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M12 5l0 14" />
+                                                <path d="M5 12l14 0" />
+                                            </svg>
+                                        </button>
+                                        <span class="position-relative">Add New Document
+                                            <input class="" type="file" id="formFile">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade modal-right enrich-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" onchange="backdropToggle()">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Business Details</h1>
+                    <button type="button" class="btn-close enrich-btn-transparent " data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card profile-card">
+                        <div class="info-badges-div">
+                            <div class="business-icon">
+                                <img src="./assets/img/PSA.png" alt="business-img">
+                            </div>
+                            <div class="action-buttons">
+                                <button class="btn enrich-btn-primary enrich-btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path>
+                                        <path d="M13.5 6.5l4 4"></path>
+                                    </svg> Edit Cover</button>
+                            </div>
+                        </div>
+                        <div class="detail-information-div input-fields-div">
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput1" class="form-label enrich-form-label">Business
+                                    Name</label>
+                                <input type="text" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput1" placeholder="Enter Business Name" value="THE PSA">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput2" class="form-label enrich-form-label">Business
+                                    Email</label>
+                                <input type="email" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput2" placeholder="Enter Business Email"
+                                    value="contact@thepsa.com">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput23" class="form-label enrich-form-label">Business
+                                    Secondary Email</label>
+                                <input type="email" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput23" placeholder="Enter Business Secondary Email"
+                                    value="contact@thepsa.com">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput3" class="form-label enrich-form-label">Phone
+                                    Number</label>
+                                <input type="text" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput3" placeholder="Enter Phone Number"
+                                    value="+213666246676">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput32" class="form-label enrich-form-label">Phone
+                                    Secondary Number</label>
+                                <input type="text" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput32" placeholder="Enter Phone Secondary Number"
+                                    value="+213666246676">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlTextarea1" class="form-label enrich-form-label">Full
+                                    Description</label>
+                                <textarea class="form-control enrich-form-control" id="exampleFormControlTextarea1"
+                                    rows="3" placeholder="Enter Session Description"
+                                    value="">Our developmental youth programs are designed to improve the coordination and technique of each participant within their particular sport</textarea>
+                            </div>
+                            <div class="button-div">
+                                <button class="btn enrich-btn-primary"> <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-check me-1">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg>
+                                    </span> Save </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-right enrich-modal" id="exampleModal2" tabindex="-1"
+        aria-labelledby="exampleModalLabel2" aria-hidden="true" onchange="backdropToggle()">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel2">Change Ownership</h1>
+                    <button type="button" class="btn-close enrich-btn-transparent " data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion accordion-flush enrich-accordion-2 ownership-accordion"
+                        id="accordionFlushExample">
+                        <div class="accordion-item active">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <div class="accordion-title">
+                                        <div class="icons-block">
+                                            <img class="accordion-img img-fluid" src="./assets/img/boy_tqlyfx.png"
+                                                alt="couch_img">
+                                        </div>
+                                        <div class="couch">
+                                            <span class="couch-name">Allan Flott 🔥</span>
+                                            <span class="couch-designation">Soccer Coach</span>
+                                        </div>
+                                    </div>
+                                    <div class="icons-div">
+                                        <a class="btn enrich-btn-primary p-1 px-2" style="white-space: nowrap;">Current
+                                            Owner</a>
+                                    </div>
+                                </button>
+                            </h2>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <div class="accordion-title">
+                                        <div class="icons-block">
+                                            <img class="accordion-img img-fluid" src="./assets/img/boy_tqlyfx.png"
+                                                alt="couch_img">
+                                        </div>
+                                        <div class="couch">
+                                            <span class="couch-name">Allan Flott 🔥</span>
+                                            <span class="couch-designation">Soccer Coach</span>
+                                        </div>
+                                    </div>
+                                    <div class="icons-div">
+                                        <a class="btn enrich-btn-primary p-1 px-2" style="white-space: nowrap;">Make
+                                            Owner</a>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOneTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body py-2 px-2">
+                                    <div class="dashed-seperator mb-2"></div>
+                                    <div class="confirmation">
+                                        <div class="confirmation-message">Are you sure you want to make Allan Flott
+                                            Owner Of
+                                            The PSA</div>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M18 6l-12 12" />
+                                                    <path d="M6 6l12 12" />
+                                                </svg> Cancel</button>
+                                            <button class="btn enrich-btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M5 12l5 5l10 -10" />
+                                                </svg> Yes I Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    <div class="accordion-title">
+                                        <div class="icons-block">
+                                            <img class="accordion-img img-fluid" src="./assets/img/boy_tqlyfx.png"
+                                                alt="couch_img">
+                                        </div>
+                                        <div class="couch">
+                                            <span class="couch-name">Allan Flott 🔥</span>
+                                            <span class="couch-designation">Soccer Coach</span>
+                                        </div>
+                                    </div>
+                                    <div class="icons-div">
+                                        <a class="btn enrich-btn-primary p-1 px-2" style="white-space: nowrap;">Make
+                                            Owner</a>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOneTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body py-2 px-2">
+                                    <div class="dashed-seperator mb-2"></div>
+                                    <div class="confirmation">
+                                        <div class="confirmation-message">Are you sure you want to make Allan Flott
+                                            Owner Of
+                                            The PSA</div>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M18 6l-12 12" />
+                                                    <path d="M6 6l12 12" />
+                                                </svg> Cancel</button>
+                                            <button class="btn enrich-btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M5 12l5 5l10 -10" />
+                                                </svg> Yes I Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    <div class="accordion-title">
+                                        <div class="icons-block">
+                                            <img class="accordion-img img-fluid" src="./assets/img/boy_tqlyfx.png"
+                                                alt="couch_img">
+                                        </div>
+                                        <div class="couch">
+                                            <span class="couch-name">Allan Flott 🔥</span>
+                                            <span class="couch-designation">Soccer Coach</span>
+                                        </div>
+                                    </div>
+                                    <div class="icons-div">
+                                        <a class="btn enrich-btn-primary p-1 px-2" style="white-space: nowrap;">Make
+                                            Owner</a>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOneTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body py-2 px-2">
+                                    <div class="dashed-seperator mb-2"></div>
+                                    <div class="confirmation">
+                                        <div class="confirmation-message">Are you sure you want to make Allan Flott
+                                            Owner Of
+                                            The PSA</div>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M18 6l-12 12" />
+                                                    <path d="M6 6l12 12" />
+                                                </svg> Cancel</button>
+                                            <button class="btn enrich-btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M5 12l5 5l10 -10" />
+                                                </svg> Yes I Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-right enrich-modal" id="exampleModal3" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true" onchange="backdropToggle()">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Instructor</h1>
+                    <button type="button" class="btn-close enrich-btn-transparent " data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body mb-3">
+                    <div class="card profile-card bg-gradient h-auto p-0">
+                        <!-- <div class="info-badges-div">
+                        <div class="business-icon">
+                            <img src="./assets/img/PSA.png" alt="business-img">
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn enrich-btn-primary enrich-btn-dark" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path>
+                                    <path d="M13.5 6.5l4 4"></path>
+                                </svg> Edit Cover</button>
+                        </div>
+                    </div> -->
+                        <div class="placeholder">
+                            <div class="d-flex gap-2 align-items-center">
+                                <div class="icon-placeholder"></div>
+                                <div class="content-placeholder">
+                                    <div class="col-8 content-item-placeholder"></div>
+                                    <div class="col-6 w-50 content-item-placeholder"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-information-div input-fields-div">
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput1" class="form-label enrich-form-label">Name</label>
+                                <input type="text" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput1" placeholder="Enter first name" value="Brahim">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput2" class="form-label enrich-form-label">Last
+                                    Name</label>
+                                <input type="text" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput2" placeholder="Enter last name" value="Chougrani">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput231"
+                                    class="form-label enrich-form-label">Email</label>
+                                <input type="email" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput231" placeholder="Enter email"
+                                    value="brahim@getenrich.com">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput3" class="form-label enrich-form-label">Phone
+                                    Number</label>
+                                <input type="text" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput3" placeholder="Enter Phone Number"
+                                    value="+213666246676">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput32" class="form-label enrich-form-label">Phone
+                                    Secondary Number</label>
+                                <input type="text" class="form-control enrich-form-control"
+                                    id="exampleFormControlInput32" placeholder="Enter Phone Secondary Number"
+                                    value="+213666246676">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput6" class="form-label enrich-form-label">Role
+                                </label>
+                                <select class="form-select enrich-form-control-select"
+                                    aria-label="Default select example" id="exampleFormControlInput6">
+                                    <option selected>Instructor</option>
+                                    <option value="1">Volenteer</option>
+                                    <option value="2">Coach</option>
+                                    <option value="3">Assistant Coach</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput61" class="form-label enrich-form-label">Required
+                                    Instructor Onboarding Documents
+                                </label>
+                                <div class="form-check">
+                                    <input class="form-check-input enrich-dark-check" type="checkbox" value=""
+                                        id="flexCheckChecked" checked>
+                                    <label class="form-check-label form-check-label" for="flexCheckChecked">
+                                        Rest Class
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input enrich-dark-check" type="checkbox" value=""
+                                        id="flexCheckChecked1" checked>
+                                    <label class="form-check-label form-check-label" for="flexCheckChecked1">
+                                        Id Proof
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input enrich-dark-check" type="checkbox" value=""
+                                        id="flexCheckChecked2" checked>
+                                    <label class="form-check-label form-check-label" for="flexCheckChecked2">
+                                        Course Certificate
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input enrich-dark-check" type="checkbox" value=""
+                                        id="flexCheckChecked3" checked>
+                                    <label class="form-check-label form-check-label" for="flexCheckChecked3">
+                                        Virtus
+                                    </label>
+                                </div>
+                                <div class="dashed-seperator my-3"></div>
+                                <div class="form-check">
+                                    <input class="form-check-input enrich-dark-check" type="checkbox" value=""
+                                        id="flexCheckChecked4" checked>
+                                    <label class="form-check-label form-check-label" for="flexCheckChecked4">
+                                        All the above information I have entered is correct. *
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="button-div">
+                                <button class="btn enrich-btn-primary"> <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-check me-1">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M5 12l5 5l10 -10"></path>
+                                        </svg>
+                                    </span> Save </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-right enrich-modal" id="exampleModal4" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true" onchange="backdropToggle()">
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Onboarding Documents</h1>
+                    <button type="button" class="btn-close enrich-btn-transparent " data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body mb-3">
+                    <div class="card profile-card bg-gradient h-100 p-0">
+                        <div class="onboarding-docs">
+                            <div class="widget-4 mb-3">
+                                <div class="file-upload-div">
+                                    <button class="btn btn-transparent">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 5l0 14"></path>
+                                            <path d="M5 12l14 0"></path>
+                                        </svg>
+                                    </button>
+                                    <span class="position-relative">Add New Document
+                                        <input class="" type="file" id="formFile">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="docs-div">
+                                <div class="widget-4 mb-2">
+                                    <div class="collapsible-item">
+                                        <div class="item-list">
+                                            <div class="item">
+                                                <div class="item-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                                        <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>
+                                                        <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6"></path>
+                                                        <path d="M17 18h2"></path>
+                                                        <path d="M20 15h-3v6"></path>
+                                                        <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-details" data-bs-toggle="collapse"
+                                                    href="#collapseExample" role="button" aria-expanded="false"
+                                                    aria-controls="collapseExample">
+                                                    <div class="item-name truncate-line-1">Liability and Consent Waiver
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-action">
+                                                <div class="user-actions">
+                                                    <button class="btn enrich-btn-view">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                                            <path
+                                                                d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="btn enrich-btn-grey">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path
+                                                                d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4">
+                                                            </path>
+                                                            <path d="M13.5 6.5l4 4"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detail-information-div input-fields-div">
+                                            <div class="item-list">
+                                                <div class="item">
+                                                    <div class="item-details">
+                                                        <div class="item-badges">
+                                                            <div class="badge badge-pill">Volunteer Must Read</div>
+                                                            <div class="badge badge-pill">Coach Must Read</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="details collapse" id="collapseExample">
+                                                <div class="dashed-seperator my-1"></div>
+                                                <div class="mb-2">
+                                                    <label for="exampleFormControlInput1"
+                                                        class="form-label enrich-form-label">Title</label>
+                                                    <input type="text" class="form-control enrich-form-control"
+                                                        id="exampleFormControlInput1" placeholder="Enter title"
+                                                        value="Terms and Conditions">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="exampleFormControlTextarea1"
+                                                        class="form-label enrich-form-label">Description</label>
+                                                    <textarea class="form-control enrich-form-control"
+                                                        id="exampleFormControlTextarea1" rows="3"
+                                                        placeholder="Enter description"
+                                                        value="">Terms and Conditions</textarea>
+                                                </div>
+                                                <div class="row mb-2 checkbox-selection">
+                                                    <div class="col-12">
+                                                        <label class="enrich-form-label">
+                                                            Select Couch Type
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="couch-radio-with-img couch-active">
+                                                            <div
+                                                                class="form-check form-check-reverse enrich-radio-check-reverse">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="exampleRadios" id="exampleRadios3"
+                                                                    value="option1" checked="">
+                                                                <label class="form-check-label enrich-form-label"
+                                                                    for="exampleRadios3">
+                                                                    <img src="./assets/img/boy_tqlyfx.png" alt="avatar"
+                                                                        class="radio-img">
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center couch-title-and-value">
+                                                                <span class="couch-title">Volunteer Must
+                                                                    Read</span><span class="couch-value"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="couch-radio-with-img">
+                                                            <div
+                                                                class="form-check form-check-reverse enrich-radio-check-reverse">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="exampleRadios" id="exampleRadios4"
+                                                                    value="option1">
+                                                                <label class="form-check-label enrich-form-label"
+                                                                    for="exampleRadios4">
+                                                                    <img src="./assets/img/boy_tqlyfx.png" alt="avatar"
+                                                                        class="radio-img">
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center couch-title-and-value">
+                                                                <span class="couch-title">Coach Must Read</span><span
+                                                                    class="couch-value"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="">
+                                                        <label for="multiple-select-field"
+                                                            class="form-label enrich-form-label">Select Consent Type
+                                                        </label>
+                                                        <select class="form-select enrich-form-control-select"
+                                                            aria-label="Default select example"
+                                                            id="multiple-select-field">
+                                                            <option selected="">Select any</option>
+                                                            <option value="1">Volenteer</option>
+                                                            <option value="2">Coach</option>
+                                                            <option value="3">Assistant Coach</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                                <div class="button-div">
+                                                    <button class="btn enrich-btn-primary"> <span class="icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-check me-1">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none">
+                                                                </path>
+                                                                <path d="M5 12l5 5l10 -10"></path>
+                                                            </svg>
+                                                        </span> Save </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-4 mb-2">
+                                    <div class="collapsible-item">
+                                        <div class="item-list">
+                                            <div class="item">
+                                                <div class="item-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-pdf">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                                        <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>
+                                                        <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6"></path>
+                                                        <path d="M17 18h2"></path>
+                                                        <path d="M20 15h-3v6"></path>
+                                                        <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <div class="item-details" data-bs-toggle="collapse"
+                                                    href="#collapseExample2" role="button" aria-expanded="false"
+                                                    aria-controls="collapseExample2">
+                                                    <div class="item-name truncate-line-1">Project tech requirements.pdf
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-action">
+                                                <div class="user-actions">
+                                                    <button class="btn enrich-btn-view">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-eye">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                                            <path
+                                                                d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="btn enrich-btn-grey">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="icon icon-tabler icons-tabler-outline icon-tabler-pencil">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                            <path
+                                                                d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4">
+                                                            </path>
+                                                            <path d="M13.5 6.5l4 4"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detail-information-div input-fields-div">
+                                            <div class="item-list">
+                                                <div class="item">
+                                                    <div class="item-details">
+                                                        <div class="item-badges">
+                                                            <div class="badge badge-pill">Volunteer Must Read</div>
+                                                            <div class="badge badge-pill">Coach Must Read</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="details collapse" id="collapseExample2">
+                                                <div class="dashed-seperator my-1"></div>
+                                                <div class="mb-2">
+                                                    <label for="exampleFormControlInput1"
+                                                        class="form-label enrich-form-label">Title</label>
+                                                    <input type="text" class="form-control enrich-form-control"
+                                                        id="exampleFormControlInput1" placeholder="Enter title"
+                                                        value="Terms and Conditions">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="exampleFormControlTextarea1"
+                                                        class="form-label enrich-form-label">Description</label>
+                                                    <textarea class="form-control enrich-form-control"
+                                                        id="exampleFormControlTextarea1" rows="3"
+                                                        placeholder="Enter description"
+                                                        value="">Terms and Conditions</textarea>
+                                                </div>
+                                                <div class="row mb-2 checkbox-selection">
+                                                    <div class="col-12">
+                                                        <label class="enrich-form-label">
+                                                            Select Couch Type
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="couch-radio-with-img couch-active">
+                                                            <div
+                                                                class="form-check form-check-reverse enrich-radio-check-reverse">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="exampleRadios" id="exampleRadios3"
+                                                                    value="option1" checked="">
+                                                                <label class="form-check-label enrich-form-label"
+                                                                    for="exampleRadios3">
+                                                                    <img src="./assets/img/boy_tqlyfx.png" alt="avatar"
+                                                                        class="radio-img">
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center couch-title-and-value">
+                                                                <span class="couch-title">Volunteer Must
+                                                                    Read</span><span class="couch-value"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="couch-radio-with-img">
+                                                            <div
+                                                                class="form-check form-check-reverse enrich-radio-check-reverse">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    name="exampleRadios" id="exampleRadios4"
+                                                                    value="option1">
+                                                                <label class="form-check-label enrich-form-label"
+                                                                    for="exampleRadios4">
+                                                                    <img src="./assets/img/boy_tqlyfx.png" alt="avatar"
+                                                                        class="radio-img">
+                                                                </label>
+                                                            </div>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center couch-title-and-value">
+                                                                <span class="couch-title">Coach Must Read</span><span
+                                                                    class="couch-value"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="button-div">
+                                                    <button class="btn enrich-btn-primary"> <span class="icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                                height="18" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="icon icon-tabler icons-tabler-outline icon-tabler-check me-1">
+                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none">
+                                                                </path>
+                                                                <path d="M5 12l5 5l10 -10"></path>
+                                                            </svg>
+                                                        </span> Save </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        function toggleClass() {
+            var element = document.getElementById("wrapper");
+            element.classList.toggle("collapsed");
+        }
+    </script>
+    <script>
+        function toggleArrow() {
+            var element = document.getElementById("menu-item-li-1");
+            element.classList.toggle("open");
+        }
+    </script>
+    <script>
+        function autoCollapse() {
+            var w = window.innerWidth;
+
+            if (w <= 1296) {
+                document.getElementById("wrapper").classList.add("collapsed");
+            }
+        }
+    </script>
+    <script>
+        window.onload = function detectTablet() {
+            var w = window.innerWidth;
+            // console.log(w);
+            if (w <= 1296 & w >= 768) {
+                document.getElementById("wrapper").classList.add("collapsed");
+            }
+        };
+    </script>
+    <script>
+        document.querySelector('[data-switch-dark]').addEventListener('click', function () {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+    <script>
+        const myCarousel = document.getElementById('myCarousel')
+
+        myCarousel.addEventListener('slide.bs.carousel', event => {
+            // do something...
+        })
+    </script>
+</body>
+
+</html>

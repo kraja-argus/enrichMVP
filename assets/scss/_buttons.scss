@@ -1,0 +1,280 @@
+.enrich-btn-transparent {
+    padding: 6px 8px;
+    border-radius: 12px;
+    line-height: normal;
+    color: var(--color-text);
+
+    svg {
+        width: 20px;
+        height: 20px;
+        color: var(--color-text);
+
+    }
+
+    &:focus,
+    &:active {
+        border-color: transparent !important;
+    }
+
+    &:hover {
+        background-color: var(--color-page-background);
+        color: var(--color-text);
+
+    }
+}
+
+.enrich-btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: 400ms;
+    color: $color-white;
+    background: $button-gradient;
+    border-color: var(--color-primary);
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 12px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white !important;
+        border-color: transparent !important;
+    }
+
+}
+
+
+.enrich-btn-danger {
+    position: relative;
+    overflow: hidden;
+    transition: 400ms;
+    color: $color-white;
+    background: $accent-color-red;
+    border-color: $accent-color-red;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 12px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white !important;
+        border-color: $accent-color-dark-red !important;
+        background-color: $accent-color-red !important;
+    }
+
+}
+
+.enrich-btn-primary-outline {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--outline-button-background);
+    transition: 0.2s ease-in-out;
+    color: $primary;
+    border-color: $primary;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white !important;
+        border-color: transparent !important;
+        background: $button-gradient;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+.enrich-btn-secondary {
+    color: var(--color-text);
+    // background:  var(--color-page-background);
+    border-color: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 12px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--color-text) !important;
+        background: var(--color-page-background) !important;
+        border-color: transparent !important;
+    }
+}
+
+.enrich-btn-secondary-outline {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent !important;
+    transition: 0.2s ease-in-out;
+    color: var(--color-text-heading) !important;
+    border-color: var(--color-text-heading) !important;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white !important;
+        border-color: $card-dark-background !important;
+        background: $card-dark-background !important;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+.enrich-btn-dark {
+    background: $card-dark-background;
+    border-color: $card-dark-background;
+
+    &:hover {
+        background: $card-dark-background;
+    }
+}
+
+.enrich-btn-outline-dark {
+    background: transparent;
+    border-color: $card-dark-background;
+    color: $card-dark-background !important;
+
+    &:hover {
+        background: $card-dark-background;
+        color: $color-white !important;
+    }
+}
+
+.enrich-btn-grey {
+    background: #465261;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #465261 !important;
+    }
+}
+
+.enrich-btn-view {
+    background: #308334;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #308334 !important;
+    }
+
+}
+
+.header-btn-dark {
+    color: $color-white;
+    padding: 4px 8px !important;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        color: $color-white;
+    }
+}
+
+.user-info-btn {
+    padding: 4px 8px 4px 4px !important;
+    cursor: pointer;
+    pointer-events: none;
+
+    .avatar {
+        width: 24px;
+        height: 24px;
+        border-radius: 100px;
+    }
+}
+
+.enrich-btn-group {
+    .btn-primary {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 10px;
+        background-color: $button-gradient;
+        border-color: transparent;
+    }
+
+
+    .dropdown-menu.show {
+        border-radius: 12px;
+        border: none;
+        background-color: var(--card-background-solid);
+        color: var(--color-text-heading);
+        border: 1px solid var(--form-border-color);
+        max-height: 360px;
+        overflow: auto;
+        width: 240px;
+        padding: 10px;
+        color: var(--color-text);
+
+        li {
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            min-height: 42.5px;
+            display: flex;
+            align-items: center;
+            color: var(--color-text-heading);
+
+            &:hover {
+                background-color: var(--color-page-background);
+                color: var(--color-text-heading);
+                border-radius: 12px;
+
+            }
+
+            .dropdown-item {
+                display: flex;
+                align-items: center;
+                padding: 4px 8px;
+                gap: 6px;
+                color: var(--color-text-heading);
+
+                &:hover {
+                    background-color: var(--color-page-background);
+                    color: var(--color-text-heading);
+                    border-radius: 12px;
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
