@@ -275,7 +275,12 @@ $calendar-sand-red: #B23032;
     .enrich-card-tabs .nav-item .nav-link {
         background: $primary-background-dark;
     }
+
     .enrich-card-tabs .nav-item .nav-link.active {
         background: $primary;
+    }
+
+    .sidebar-session-card .game-title-div .scheduled-session {
+        background-color: $card-background-solid !important;
     }
 }

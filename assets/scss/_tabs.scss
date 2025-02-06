@@ -77,7 +77,7 @@
 }
 
 .enrich-slim-pill-tabs {
-    background: var(--border-color);
+    background: #CDCDCD;
     border-radius: 24px;
     color: var(--color-text-heading);
 
@@ -165,5 +165,51 @@
 
             }
         }
+    }
+}
+
+.selected-div-img {
+    background: #D6F9DC;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    img {
+        width: 24px;
+        object-fit: contain;
+    }
+}
+
+.unselected-div-img {
+    background: #D1E3FB;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    img {
+        width: 24px;
+        object-fit: contain;
+    }
+}
+
+
+.horizoltal-scroll-link-tabs {
+    width: 100%;
+    overflow: auto;
+    z-index: 2;
+    background-color: #F1F2FA;
+
+    .enrich-btn-primary {
+        white-space: nowrap;
+        display: table;
+    }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

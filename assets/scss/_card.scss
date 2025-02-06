@@ -677,7 +677,8 @@
             color: $color-white;
             // background: linear-gradient(180deg, #A81316 0%, #fff8f841 100%);
             background:
-                linear-gradient(180deg, #A81316 18%, #fff8f8 100%); font-size: 15px;
+                linear-gradient(180deg, #A81316 18%, #fff8f8 100%);
+            font-size: 15px;
             font-weight: 600;
             padding: 3px 12px;
             border-radius: 10px 10px 0 0px;
@@ -1019,6 +1020,16 @@
                         -webkit-box-orient: vertical;
                     }
                 }
+            }
+        }
+
+        .scheduled-session {
+            background: #C4D0D9 !important;
+
+            .game-time {
+                white-space: nowrap;
+                width: fit-content;
+                text-align: right;
             }
         }
     }
@@ -1518,6 +1529,7 @@
     background: $gradient;
     border-radius: 10px;
     padding: 12px;
+    cursor: unset;
 
     .icon-placeholder {
         width: 40px;
@@ -2061,7 +2073,8 @@
 
 .profile-card {
     .order-receipt {
-        background-color: #FFFFFF80;
+        backdrop-filter: blur(7.300000190734863px);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(235, 235, 235, 0.8) 100%);
         border-radius: 100px;
         padding: 3px;
         padding-right: 16px;
@@ -2145,8 +2158,47 @@
         height: 100%;
         overflow: auto;
     }
+
+
+    .tabs-data {
+        scroll-snap-type: y mandatory;
+        scroll-padding-top: 120px;
+
+        div {
+            scroll-snap-align: start;
+        }
+    }
 }
 
 .maxed-width {
     max-width: calc(100vw - 100px) !important;
+}
+
+
+.border-ring-class {
+    outline: 4px solid #adb5c0e3;
+}
+
+.bg-purple-user {
+    background: #EFE0FF;
+
+    .user-name {
+        color: $text-color-dark !important;
+    }
+}
+
+.bg-light-blue-user {
+    background: #E5F0FE;
+
+    .user-name {
+        color: $text-color-dark !important;
+    }
+}
+
+.bg-light-green-user {
+    background: #E5FEE9;
+
+    .user-name {
+        color: $text-color-dark !important;
+    }
 }

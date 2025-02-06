@@ -8,7 +8,7 @@
     @media (max-width: 767px) {
         padding: 20px 10px;
         position: fixed;
-        z-index: 3;
+        z-index: 11;
         height: 100vh;
         left: -270px;
     }
@@ -221,7 +221,7 @@
     .enrich-sidebar {
         position: fixed;
         height: 100%;
-        z-index: 3;
+        z-index: 11;
 
         @media (max-width: 767px) {
             left: -90px;
@@ -615,6 +615,10 @@
                 .blur-background {
                     width: -webkit-fill-available;
                     max-width: 1400px;
+
+                    @media (max-width: 1440px) {
+                        left: 8%;
+                    }
                 }
             }
 
@@ -680,7 +684,7 @@
         position: fixed;
         width: -webkit-fill-available;
         padding-right: 20px;
-        z-index: 2;
+        z-index: 10;
 
         .blur-background {
             background: transparent;

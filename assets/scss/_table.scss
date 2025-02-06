@@ -107,6 +107,7 @@
 
     thead {
         color: var(--color-text-heading);
+        font-weight: 700;
     }
 
     tbody {
@@ -231,7 +232,7 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        padding: 0 12px;
+        padding: 16px 12px 12px 4px;
         overflow: visible;
         width: 340px;
 
@@ -313,6 +314,16 @@
             }
         }
     }
+
+    .widget-5 {
+        .user-card {
+            .user-details {
+                .user-name {
+                    color: $text-color-dark;
+                }
+            }
+        }
+    }
 }
 
 
@@ -322,6 +333,7 @@
 
     thead {
         color: var(--color-text-heading);
+        font-weight: 700;
     }
 
     tbody {
@@ -575,6 +587,16 @@
             }
         }
     }
+
+    .widget-5 {
+        .user-card {
+            .user-details {
+                .user-name {
+                    color: $text-color-dark;
+                }
+            }
+        }
+    }
 }
 
 
@@ -636,4 +658,26 @@
 
 .session-active {
     background: #8DFF8D !important;
+}
+
+.sent-table {
+    tr {
+        display: flex;
+        width: 100%;
+
+        th,
+        td {
+            &:first-child {
+                width: 20%;
+            }
+
+            &:nth-child(2) {
+                width: 20%;
+            }
+
+            &:nth-child(3) {
+                width: 60%;
+            }
+        }
+    }
 }
